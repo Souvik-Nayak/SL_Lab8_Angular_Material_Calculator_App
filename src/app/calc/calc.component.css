@@ -1,0 +1,132 @@
+input {
+	font-size: medium;
+	font-weight: bold;
+	color: #e05d5d;
+	border-color: #e05d5d;
+}
+
+button {
+	font-family: 'Urbanist', sans-serif;
+}
+
+button:focus {
+	background-color: #d4ecdd;
+	color: #112031;
+}
+
+.btn-1 {
+	background-color: green;
+	border: none;
+	border-radius: 10rem;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-left: 5rem;
+	margin-right: 2rem;
+	width: 8rem;
+	height: 25px;
+}
+
+.btn-2 {
+	background-color: blue; /* Green */
+	border: none;
+	border-radius: 10rem;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 2rem;
+	width: 8rem;
+	height: 25px;
+}
+
+.btn-3 {
+	background-color: rgb(218, 95, 115); /* Green */
+	border: none;
+	border-radius: 10rem;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 2rem;
+	width: 8rem;
+	height: 25px;
+}
+
+.btn-4 {
+	background-color: #610094; /* Green */
+	border: none;
+	border-radius: 10rem;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 2rem;
+	width: 8rem;
+	height: 25px;
+}
+
+.btn-5 {
+	background-color: green;
+	border: none;
+	border-radius: 10rem;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 2rem;
+	width: 10rem;
+	height: 25px;
+	margin-left: 5rem;
+}
+
+.btn-6 {
+	background-color: rgb(218, 95, 115);
+	border: none;
+	border-radius: 10rem;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 2rem;
+	width: 10rem;
+	height: 25px;
+}
+
+.grid {
+	display: flex;
+	justify-content: center;
+}
+
+.grid-footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.input-1 {
+	font-size: large;
+	font-weight: bold;
+}
+
+.input-2 {
+	font-size: large;
+	font-weight: bold;
+	margin-left: 2rem;
+}
+
+.result {
+	font-size: x-large;
+	font-weight: bolder;
+	color: #59558a;
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+}
