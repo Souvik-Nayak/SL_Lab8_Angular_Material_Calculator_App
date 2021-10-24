@@ -7,67 +7,96 @@ import { Component } from '@angular/core';
 })
 
 export class CalcComponent {
-
-  firstNumber!: string;
-  secondNumber!: string;
-  result!: number;
-  factorialNumber!: string;
-  result2!: number;
-  display!:string;
-  primeNumber!: string;
-  result3!: string;
-
-  Add_Number(){
-    this.result = parseInt(this.firstNumber) + parseInt(this.secondNumber);
-    this.display = parseInt(this.firstNumber) + " + " + parseInt(this.secondNumber) + " = ";
+  operator: string
+  first = ""
+  second = ""
+  operations = ['+', '-', '*','/','!','p']
+  display = ""
+  constructor() 
+  {
+    this.operator = ""
   }
 
-  Subtract_Number(){
-    this.result = parseInt(this.firstNumber) - parseInt(this.secondNumber);
-    this.display = parseInt(this.firstNumber) + " - " + parseInt(this.secondNumber) + " = ";
-  }
+  calculate() {
+    if (this.operator != "") {
+      let first = parseFloat(this.first)     
+      let second = parseFloat(this.second)
 
-  Multiply_Number(){
-    this.result = parseInt(this.firstNumber) * parseInt(this.secondNumber);
-    this.display = parseInt(this.firstNumber) + " * " + parseInt(this.secondNumber) + " = ";
-  }
+      switch (this.operator) {
+        case '+':
+          this.display = `${this.display}=${first + second}`
+          break;
 
-  Divide_Number(){
-    this.result = parseInt(this.firstNumber) / parseInt(this.secondNumber);
-    this.display = parseInt(this.firstNumber) + " / " + parseInt(this.secondNumber) + " = ";
-  }
+        case '-':
+          this.display= `${this.display}=${first - second}`
+          break;
 
-  Factorial(){
-    let i:number = 0;
-    let sum:number = 1;
+        case '*':
+          this.display = `${this.display}=${first * second}`
+          break;
 
-    for(i=1;i<=parseInt(this.factorialNumber);i++)
-    {
-        sum *= i;
+        case '/':
+          this.display = `${this.display}=${first / second}`
+          break;
+
+        case '!':
+          var num:number = first; 
+          var factorial:number = 1; 
+          while(num >=1) { 
+              factorial = factorial * num; 
+              num--; 
+          } 
+          this.display = `${this.display}=${factorial}`
+          break;
+
+        case 'p':
+          var num:number = first; 
+          var flag:number = 0;
+          var i:number = 2;
+          while(num>i) { 
+              if(num%i==0){
+                flag = 1;
+                break;
+              }
+              i++;
+          } 
+          if(flag == 0){
+            this.display = `${this.display}=${'Prime'}`
+          }else{
+            this.display = `${this.display}=${'Not Prime'}`
+          }
+          break;
+
+        default:
+          break;
+      }
     }
-
-    this.result2 = sum;
   }
 
-  Prime(){
-    let i:number = 0;
-    let count:number = 0;
-
-    for(i=1;i<=parseInt(this.primeNumber);i++)
-    {
-        if(parseInt(this.primeNumber)%i == 0)
-        {
-          count++;
-        }
-    }
-
-    if(count==2)
-    {
-      this.result3 = "YES, IT IS A PRIME NUMBER";
-    }
-    else if(count>2)
-    {
-      this.result3 = "NO, IT IS NOT A PRIME NUMBER";
+  Number(value: number) {
+    if (this.operator != "") {
+      this.second += value
+      this.display = `${this.first}${this.operator}${this.second}`
     } 
+    else {
+      this.first += value
+      this.display = this.first
+    }
+  }
+
+  Operator(operator: string) {
+    if (this.operator != "") {
+      this.display = `${this.display.substring(1, this.display.length - 1)}${operator}`
+    } else {
+      this.display = `${this.display}${operator}`
+    }
+    this.operator = operator
+  }
+
+  Clear(){
+    this.display="";
+    this.first = ""
+    this.second = ""
+    this.operator = ""
   }
 }
