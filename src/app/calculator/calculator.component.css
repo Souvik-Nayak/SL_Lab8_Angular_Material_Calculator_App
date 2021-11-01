@@ -1,3 +1,23 @@
+.main {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin-left: 34rem;
+}
+
+.button-row {
+	display: flex;
+	margin-top: -3.5rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.button-row-2 {
+	margin-top: -7px;
+	margin-left: 5px;
+}
+
 .card {
 	position: absolute;
 	margin-left: 50rem;
@@ -5,26 +25,18 @@
 	width: 400px;
 }
 
-.example-card {
-	max-width: 400px;
-}
-
-.example-header-image {
-	background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-	background-size: cover;
-}
-
 .shell {
 	position: absolute;
 	width: 360px;
 	height: 530px;
-	top: 40px;
-	left: -50rem;
+	top: 75px;
+	left: 5.7rem;
 	right: 0;
 	bottom: 0;
 	margin: 50px auto;
 	border: 1px solid #201201;
 	border-radius: 10px;
+	background-color: #1f1d36;
 }
 
 .screen {
@@ -45,6 +57,16 @@
 	text-align: right;
 }
 
+.numeric {
+	width: 320px;
+	height: 340px;
+	margin: 0 auto;
+}
+
+.color-hunt {
+	background-color: #dfd8ca;
+}
+
 .btn,
 .btn1 {
 	position: relative;
@@ -54,6 +76,19 @@
 	font-size: 20px;
 	border: none;
 	background-color: darkgray;
+	border-radius: 100%;
+}
+
+.btn-2 {
+	width: 68%;
+	position: relative;
+	height: 50px;
+	width: 60px;
+	margin: 15px 8px 0px 10px;
+	font-size: 20px;
+	border: none;
+	background-color: darkgray;
+	border-radius: 20px;
 }
 
 .c-btn {
@@ -66,4 +101,19 @@
 .btn1 {
 	color: rgb(220, 235, 235);
 	background-color: rgb(15, 100, 235);
+}
+
+.equal-btn {
+	margin-left: 8px;
+	position: absolute;
+	height: 180px;
+	margin-top: -50px;
+}
+
+.prime-btn {
+	width: 80px;
+}
+
+.fact-btn {
+	width: 120px;
 }

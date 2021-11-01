@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-calc',
-  templateUrl: './calc.component.html',
-  styleUrls: ['./calc.component.css']
+  selector: 'app-calculator',
+  templateUrl: './calculator.component.html',
+  styleUrls: ['./calculator.component.css']
 })
 
-export class CalcComponent {
+export class CalculatorComponent {
   operator: string
   first = ""
   second = ""
